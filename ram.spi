@@ -1,0 +1,6 @@
+open corebase
+nominal ra t = $"ResizeArray<`t>"
+inl add forall t. (array : ra t) (x : t) : () = $"!array.Add(!x)"
+
+
+instance length ra = fun x => $"!x.Count"
